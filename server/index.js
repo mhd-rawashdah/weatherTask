@@ -45,9 +45,10 @@ let log = async () => {
 }
 
 // set interval to excute log function each 5 minute
+const fiveMinute = 300000; // in millisecond
 setInterval(() => {
   log();
-}, 600000)
+}, fiveMinute)
 
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
